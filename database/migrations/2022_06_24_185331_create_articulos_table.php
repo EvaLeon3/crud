@@ -18,6 +18,7 @@ class CreateArticulosTable extends Migration
             $table->string('codigo');
             $table->string('descripcion');
             $table->integer('cantidad');
+            $table->integer('precio');
             $table->timestamps();
         });
     }
