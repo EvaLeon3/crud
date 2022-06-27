@@ -36,6 +36,12 @@ class ArticuloController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request->validate([
+            'name'=> 'required'
+            
+            ]);
+
         $articulos = new Articulo();
 
         $articulos->codigo = $request->get('codigo');
@@ -56,7 +62,7 @@ class ArticuloController extends Controller
      */
     public function show($id)
     {
-        //
+       
     }
 
     /**
