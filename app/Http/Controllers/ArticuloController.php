@@ -38,8 +38,10 @@ class ArticuloController extends Controller
     {
 
         $request->validate([
-            'name'=> 'required'
-            
+            'codigo'=> 'required|string|',
+            'descripcion' => 'required|string',
+            'cantidad' => 'required|integer',
+            'precio' => 'required|integer',
             ]);
 
         $articulos = new Articulo();
