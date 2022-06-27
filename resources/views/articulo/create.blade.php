@@ -5,6 +5,13 @@
 
 <form action="/articulos" method="POST">
     @csrf
+    @if($errors->any())
+        <div class="alert alert-danger">
+            @foreach($errors->all() as $error)
+            - {{ $error }} <br>
+            @endforeach
+        </div>
+    @endif
     <div class="nb-3">
         <label for="" class="form-label">Código </label>
         <input id="codigo" name="codigo" type="text" class="form-control" tabindex="1">
